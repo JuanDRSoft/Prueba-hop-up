@@ -1,0 +1,69 @@
+<%- include('header') %>
+<main class="inicio">
+    <section class="cajaDesplegable">
+        <div class="barra">
+            <h1>EL MAYOR ARSENAL DE AIRSOFT EN ESPAÑA</h1>
+        </div>
+        <div class="escondido">
+            <p><b>ATENCIÓN: </b><u>'HOP UP' SE ENCUENTRA EN FASE BETA DE DESARROLLO</u></p>
+            <p>No dude en comunicarnos cualquier incidencia o sugerencia<span class="grande">. ¡Perdone las molestias!</span></p>
+            <p class="pequeño" style="display: none;">¡Perdone las molestias!</p>
+        </div>
+    </section>
+
+    <section class="textos">
+        <div class="texto izquierda">
+            <h2>¡BIENVENIDO A 'HOP UP'!</h2>
+            <p>Esta plataforma te brindará la información más relevante y precisa que necesitas a la hora de adquirir nuevo equipo. Nuestro compromiso radica en proporcionarte la herramienta necesaria para tomar siempre la mejor decisión, comparando entre todas las opciones disponibles en el mercado online español.</p>
+        </div>
+        <hr>
+        <div class="texto derecha">
+            <h2>¿CÓMO FUNCIONA?</h2>
+            <p>Nuestra principal función es consolidar una amplia gama de productos disponibles a lo largo de todas las tiendas de airsoft del país, cubriendo una gran diversidad de plataformas de venta, tanto de equipos nuevos como usados. Así garantizamos que selecciones el equipo que mejor se alinea con tus necesidades y presupuesto.</p>
+        </div>
+        <div class="texto individual" style="display: none;">
+            <h2>¡BIENVENIDO!</h2>
+            <p>'HOP UP' te ofrece información precisa y relevante para ayudarte a tomar decisiones informadas al adquirir nuevo equipo. Comparamos todas las opciones disponibles en el mercado online español, brindándote la herramienta necesaria para elegir siempre lo mejor. Además, consolidamos una amplia gama de productos de tiendas de airsoft de todo el país, tanto nuevos como usados, para que encuentres el equipo que se ajuste perfectamente a tus necesidades y presupuesto.</p>
+        </div>
+    </section>
+    <section class="tipo-productos">
+        <a href="/replicas" class="producto replicas">
+            <div class="fondo"><h3>RÉPLICAS</h3></div>
+        </a>
+        <a class="producto accesorios">
+            <div class="fondo"><h3>ACCESORIOS</h3></div>
+        </a>
+        <a class="producto equipamiento">
+            <div class="fondo"><h3>EQUIPAMIENTO</h3></div>
+        </a>
+        <a class="producto servicios">
+            <div class="fondo"><h3>SERVICIOS</h3></div>
+        </a>
+    </section>
+    <section class="textos">
+        <div class="texto individual">
+            <h2>CONTÁCTANOS</h2>
+            <form action="/contacto" method="POST">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br>
+                <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required><br>
+                <textarea rows="4" cols="50" id="mensaje" name="mensaje" placeholder="Tu Mensaje" required></textarea><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/js/index.js"></script>
+    <script src="/js/selector-tipos-producto.js"></script>
+</main>
+<%- include('footer') %>

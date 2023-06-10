@@ -1,0 +1,37 @@
+<%- include('header') %>
+<main class="inicio">
+    <section class="cajaDesplegable">
+        <div class="barra">
+            <h1>EL MAYOR ARSENAL DE AIRSOFT EN ESPAÑA</h1>
+        </div>
+        <div class="escondido">
+            <p><span>ATENCIÓN:</span> 'HOP UP' SE ENCUENTRA EN FASE BETA DE DESARROLLO</p>
+            <p>No dude en comunicarnos cualquier incidencia o sugerencia. ¡Perdone las molestias!</p>
+        </div>
+    </section>
+
+    <section class="textos">
+        <div class="texto individual">
+            <h2><%= titulo %></h2>
+            <p><%= mensaje %></p>
+        </div>
+    </section>
+
+    <section class="tipo-productos">
+        <a href="/replicas" class="producto replicas">
+            <div class="fondo"><h3>RÉPLICAS</h3></div>
+        </a>
+        <a class="producto accesorios">
+            <div class="fondo"><h3>ACCESORIOS</h3></div>
+        </a>
+        <a class="producto equipamiento">
+            <div class="fondo"><h3>EQUIPAMIENTO</h3></div>
+        </a>
+        <a class="producto servicios">
+            <div class="fondo"><h3>SERVICIOS</h3></div>
+        </a>
+    </section>
+
+    <script src="/js/selector-tipos-producto.js"></script>
+</main>
+<%- include('footer') %>

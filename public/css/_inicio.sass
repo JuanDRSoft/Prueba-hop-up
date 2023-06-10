@@ -1,0 +1,668 @@
+main.inicio
+    width: 100%
+
+    .cajaDesplegable
+        position: relative
+        height: 100px
+        overflow: hidden
+        transition: height 0.3s ease
+
+        .barra
+            position: relative
+            height: 100px
+            background: $azulClaro
+            display: flex
+            z-index: 2
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+            h1
+                font-size: 30px
+                padding: calc( #{$margen} / 2 )
+                font-weight: 600
+                text-align: center
+                color: $naranja
+
+        .escondido
+            position: relative
+            top: 0px
+            height: auto
+            width: 100%
+            height: 100px
+            z-index: 1
+            transition: top 0.3s ease
+            cursor: pointer
+            background: $naranja
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding:  calc( #{$margen} / 8 ) $margen1200
+
+            p
+                text-align: center
+                font-size: 24px
+                font-weight: 700
+                font-family: $fuente1
+                font-weight: 600
+                color: $azulOscuro
+
+                b
+                    font-family: $fuente1
+                    font-weight: 1000
+
+    .textos
+        width: 100%
+        max-width: 1200px
+        padding: $margen calc( #{$margen} )
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+
+        .texto
+            width: calc( 50% - #{$margen} )
+            text-align: justify
+            color: $naranja
+
+            h2
+                font-size: 30px
+                font-weight: 900
+                margin-bottom: calc( #{$margen} / 2 )
+                // text-decoration: underline
+
+            p
+                font-size: 24px
+                font-weight: 600
+
+            form
+                width: 100%
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+
+                input, textarea
+                    background: $azulClaroTransparente1
+                    backdrop-filter: blur(2px)
+                    border: $naranja 0px solid
+                    width: 100%
+                    resize: none
+                    text-align: center
+                    font-size: 20px
+                    font-weight: 600
+                    padding: calc( #{$margen} / 2 )
+                    color: $naranja
+                    transition: all 0.3s ease
+                    cursor: pointer
+
+                    &:focus
+                        background: $azulClaroTransparente2
+                        outline: none
+                        transform: scale(1.03)
+                        // border: $naranja 3px solid
+                        resize: none
+                        cursor: text
+
+                    &:hover
+                        background: $azulClaroTransparente2
+                        transform: scale(1.03)
+
+                    &::placeholder
+                        font-size: 20px
+                        font-weight: 600
+                        color: $naranja
+
+                #nombre
+                    width: calc( 50% - (#{$margen} / 4) )
+                    margin-bottom: calc(#{$margen} / 2)
+                    margin-right: calc(#{$margen} / 4)
+
+                #correo
+                    width: calc( 50% - (#{$margen} / 4) )
+                    margin-bottom: calc(#{$margen} / 2)
+                    margin-left: calc(#{$margen} / 4)
+
+                textarea
+                    margin-bottom: calc(#{$margen} / 2)
+
+                input[type="submit"]
+                    width: auto
+                    background: $naranja
+                    color: $azulOscuro
+                    padding: calc( #{$margen} / 2 ) calc( #{$margen} / 1 )
+
+                    &:hover
+                        transform: scale(1.1)
+                        color: #fff
+
+        .derecha
+            h2
+                text-align: right
+
+        .individual
+            width: calc( 100% - #{$margen} )
+
+            h2
+                text-align: center
+
+        hr
+            border: 1px solid $naranja
+
+    .tipo-productos
+        width: 100%
+        height: 800px
+        background: $azulOscuro
+        display: flex
+        flex-wrap: wrap
+
+        .producto
+            width: 50%
+            height: 50%
+            display: inline-block
+            overflow: hidden
+            text-decoration: none
+            
+
+            .fondo
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+                height: 100%
+                background-size: cover
+                background-position: center center
+                backdrop-filter: brightness(60%)
+                -webkit-backdrop-filter: brightness(60%)
+                transition: all 0.3s ease
+                cursor: pointer
+
+                h3
+                    color: $naranja
+                    font-weight: 900
+                    backdrop-filter: brightness(100%)
+                    -webkit-backdrop-filter: brightness(100%)
+                    font-size: 30px
+                    text-align: center
+                    padding: calc( #{$margen} / 8 ) calc( #{$margen} / 2 )
+                    width: 100%
+                    background: $azulClaroTransparente1
+                    transition: all 0.3s ease
+
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background-color: rgba(0, 0, 0, 0.4) 
+                    transition: all 0.3s ease
+                    opacity: 1
+
+            &:hover
+                .fondo
+                    transform: scale(1.1)
+                    backdrop-filter: brightness(100%)
+                    -webkit-backdrop-filter: brightness(100%)
+
+                    h3
+                        background: $azulClaroTransparente2
+
+                    &:before
+                        opacity: 0
+
+
+        .replicas
+            .fondo
+                background-image: url('../img/tipos_productos/Replicas1.jpg')
+            
+        .accesorios
+            .fondo
+                background-image: url('../img/tipos_productos/Accesorios3.jpg')
+
+        .equipamiento
+            .fondo
+                background-image: url('../img/tipos_productos/Equipamiento1.jpg')
+
+        .servicios
+            .fondo
+                background-image: url('../img/tipos_productos/Servicios1.jpg')
+
+
+@media (max-width: 1350px)
+    main.inicio
+        .tipo-productos
+            width: 100%
+            height: 650px
+            flex-wrap: wrap
+
+            .producto
+                width: 50%
+                height: 50%
+
+                .fondo
+                    h3
+                        font-size: 30px
+                        padding: calc( #{$margen} / 8 ) calc( #{$margen} / 2 )
+                        width: 100%
+
+            .replicas
+                width: 100%
+                height: calc( ( 100% / 3 ) * 2 )
+
+                .fondo
+                    h3
+                        font-size: 35px
+                        padding: calc( #{$margen} / 4 ) calc( #{$margen} )
+
+
+            .accesorios, .equipamiento, .servicios
+                width: calc( 100% / 3 )
+                height: calc( 100% / 3 )
+
+
+@media (max-width: 1200px)
+    main.inicio
+        .textos
+            padding: $margen1200 calc( #{$margen1200} )
+            margin: 0 auto
+
+            .texto
+                width: calc( 50% - #{$margen1200} )
+
+                h2
+                    font-size: 2.5vw
+                    margin-bottom: calc( #{$margen1200} / 2 )
+
+                p
+                    font-size: 2vw
+
+                form
+                    input, textarea
+                        font-size: 1.66vw
+                        padding: calc( #{$margen1200} / 2 )
+
+                        &::placeholder
+                            font-size: 1.66vw
+
+                    #nombre
+                        width: calc( 50% - (#{$margen1200} / 4) )
+                        margin-bottom: calc(#{$margen1200} / 2)
+                        margin-right: calc(#{$margen1200} / 4)
+
+                    #correo
+                        width: calc( 50% - (#{$margen1200} / 4) )
+                        margin-bottom: calc(#{$margen1200} / 2)
+                        margin-left: calc(#{$margen1200} / 4)
+
+                    textarea
+                        margin-bottom: calc(#{$margen1200} / 2)
+
+                    input[type="submit"]
+                        padding: calc( #{$margen1200} / 2 ) calc( #{$margen1200} / 1 )
+
+            .individual
+                width: calc( 100% - #{$margen1200} )
+
+                h2
+                    text-align: center
+
+            hr
+                border: 1px solid $naranja
+
+
+@media (max-width: 970px)
+    main.inicio
+        .cajaDesplegable
+            .barra
+                h1
+                    font-size: 30px
+                    padding: calc( #{$margen} / 2 )
+
+            .escondido
+                padding: calc( #{$margen} / 8 ) $margen1200
+
+                p
+                    padding: 0
+                    font-size: 20px
+                    line-height: 1.25
+
+                    .grande
+                        display: none
+                    
+                    &.pequeño
+                        display: block !important
+
+        .textos
+            padding: $margen1200 calc( #{$margen1200} )
+            // Creo que no hace nada ESTO DE .TEXTOS
+            margin: 0 auto
+
+            .texto
+                width: calc( 50% - #{$margen1200} )
+
+                h2
+                    font-size: 2.5vw
+                    margin-bottom: calc( #{$margen1200} / 2 )
+
+                p
+                    font-size: 2vw
+
+                form
+                    input, textarea
+                        font-size: 1.66vw
+                        padding: calc( #{$margen1200} / 2 )
+
+                        &::placeholder
+                            font-size: 1.66vw
+
+                    #nombre
+                        width: calc( 50% - (#{$margen1200} / 4) )
+                        margin-bottom: calc(#{$margen1200} / 2)
+                        margin-right: calc(#{$margen1200} / 4)
+
+                    #correo
+                        width: calc( 50% - (#{$margen1200} / 4) )
+                        margin-bottom: calc(#{$margen1200} / 2)
+                        margin-left: calc(#{$margen1200} / 4)
+
+                    textarea
+                        margin-bottom: calc(#{$margen1200} / 2)
+
+                    input[type="submit"]
+                        padding: calc( #{$margen1200} / 2 ) calc( #{$margen1200} / 1 )
+
+            .individual
+                width: calc( 100% - #{$margen1200} )
+
+                h2
+                    text-align: center
+
+            hr
+                border: 1px solid $naranja
+
+
+@media (max-width: 770px)
+    main.inicio
+        .cajaDesplegable
+            .barra
+                h1
+                    font-size: 30px
+                    padding: calc( #{$margen} / 2 )
+
+            .escondido
+                padding: calc( #{$margen} / 8 ) $margen1200
+
+        .textos
+            padding: $margen770
+            margin: 0 auto
+
+            .texto
+                width: calc( 50% - #{$margen770} )
+
+                h2
+                    font-size: 3.5vw
+                    margin-bottom: calc( #{$margen770} / 2 )
+
+                p
+                    font-size: 2.8vw
+
+                form
+                    input, textarea
+                        font-size: 2.5vw
+                        padding: calc( #{$margen770} / 2 )
+
+                        &::placeholder
+                            font-size: 2.5vw
+
+                    #nombre
+                        width: calc( 50% - (#{$margen770} / 4) )
+                        margin-bottom: calc(#{$margen770} / 2)
+                        margin-right: calc(#{$margen770} / 4)
+
+                    #correo
+                        width: calc( 50% - (#{$margen770} / 4) )
+                        margin-bottom: calc(#{$margen770} / 2)
+                        margin-left: calc(#{$margen770} / 4)
+
+                    textarea
+                        margin-bottom: calc(#{$margen770} / 2)
+
+                    input[type="submit"]
+                        padding: calc( #{$margen770} / 2 ) calc( #{$margen770} / 1 )
+
+                &.derecha, &.izquierda
+                    display: none
+
+                &.individual
+                    display: block !important
+                    width: 100%
+
+                    h2
+                        text-align: center
+
+            hr
+                display: none
+
+            main.inicio
+        
+        .tipo-productos
+            width: 100%
+            height: 500px
+            flex-wrap: wrap
+
+            .producto
+                .fondo
+                    h3
+                        font-size: 30px
+                        padding: calc( #{$margen} / 8 ) calc( #{$margen} / 2 )
+
+            .replicas
+                width: 50%
+                height: 50%
+
+                .fondo
+                    h3
+                        font-size: 30px
+                        padding: calc( #{$margen} / 8 ) calc( #{$margen} / 2 )
+
+
+            .accesorios, .equipamiento, .servicios
+                width: 50%
+                height: 50%
+
+@media (max-width: 700px)
+    main.inicio
+        .cajaDesplegable
+            .barra
+                h1
+                    font-size: 4.24vw
+                    padding: calc( #{$margen} / 2 )
+
+            .escondido
+                padding: calc( #{$margen} / 8 ) $margen1200
+
+                p
+                    font-size: 2.8vw
+
+        .textos
+            padding: $margen770
+            margin: 0 auto
+
+            .texto
+                width: calc( 50% - #{$margen770} )
+
+                h2
+                    font-size: 3.5vw
+                    margin-bottom: calc( #{$margen770} / 2 )
+
+                p
+                    font-size: 2.8vw
+
+                form
+                    input, textarea
+                        font-size: 2.5vw
+                        padding: calc( #{$margen770} / 2 )
+
+                        &::placeholder
+                            font-size: 2.5vw
+
+                    #nombre
+                        width: calc( 50% - (#{$margen770} / 4) )
+                        margin-bottom: calc(#{$margen770} / 2)
+                        margin-right: calc(#{$margen770} / 4)
+
+                    #correo
+                        width: calc( 50% - (#{$margen770} / 4) )
+                        margin-bottom: calc(#{$margen770} / 2)
+                        margin-left: calc(#{$margen770} / 4)
+
+                    textarea
+                        margin-bottom: calc(#{$margen770} / 2)
+
+                    input[type="submit"]
+                        padding: calc( #{$margen770} / 2 ) calc( #{$margen770} / 1 )
+
+                &.derecha, &.izquierda
+                    display: none
+
+                &.individual
+                    display: block !important
+                    width: 100%
+
+                    h2
+                        text-align: center
+
+            hr
+                display: none
+
+            main.inicio
+        
+        .tipo-productos
+            height: 400px
+
+            .producto
+                .fondo
+                    h3
+                        font-size: 20px
+
+            .replicas
+                width: 50%
+                height: 50%
+
+                .fondo
+                    h3
+                        font-size: 20px
+
+@media (max-width: 445px)
+    main.inicio
+        .cajaDesplegable
+            .barra
+                h1
+                    font-size: 6vw
+                    padding: calc( #{$margen} / 2 )
+
+            .escondido
+                padding: calc( #{$margen} / 8 ) $margen1200
+
+                p
+                    font-size: 3.3vw
+                    line-height: 1.7
+
+                    b
+                        display: none
+                    
+        .textos
+            padding: $margen770
+            margin: 0 auto
+
+            .texto
+                width: calc( 50% - #{$margen770} )
+
+                h2
+                    font-size: 4vw
+                    margin-bottom: calc( #{$margen770} / 2 )
+
+                p
+                    font-size: 3.3vw
+
+                form
+                    input, textarea
+                        font-size: 3vw
+                        padding: calc( #{$margen770} / 2 )
+
+                        &::placeholder
+                            font-size: 3vw
+
+                    #nombre
+                        width: calc( 50% - (#{$margen770} / 4) )
+                        margin-bottom: calc(#{$margen770} / 2)
+                        margin-right: calc(#{$margen770} / 4)
+
+                    #correo
+                        width: calc( 50% - (#{$margen770} / 4) )
+                        margin-bottom: calc(#{$margen770} / 2)
+                        margin-left: calc(#{$margen770} / 4)
+
+                    textarea
+                        margin-bottom: calc(#{$margen770} / 2)
+
+                    input[type="submit"]
+                        padding: calc( #{$margen770} / 4 ) calc( #{$margen770} / 2 )
+
+                &.derecha, &.izquierda
+                    display: none
+
+                &.individual
+                    display: block !important
+                    width: 100%
+
+                    h2
+                        text-align: center
+
+            hr
+                display: none
+
+            main.inicio
+        
+        .tipo-productos
+            height: 400px
+
+            .producto
+                .fondo
+                    h3
+                        font-size: 20px
+
+            .replicas
+                width: 50%
+                height: 50%
+
+                .fondo
+                    h3
+                        font-size: 20px
+
+@media (max-width: 375px)
+    main.inicio
+        .cajaDesplegable
+            .escondido
+                p
+                    line-height: 2
+
+                    b
+                        display: none
+                    
+
+        .tipo-productos
+            height: 800px
+
+            .producto
+                .fondo
+                    h3
+                        font-size: 20px
+
+            .replicas, .accesorios, .equipamiento, .servicios
+                width: 100%
+                height: 25%
+
+

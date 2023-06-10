@@ -1,0 +1,1257 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *::selection {
+    color: #fff;
+    background: #F39200; }
+
+body::-webkit-scrollbar {
+  width: 0px; }
+
+body {
+  color: #fff;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: overlay;
+  overflow-x: hidden;
+  background: linear-gradient(-55deg, #15171b 0%, #1b1d27 50%, #20232c 50%, #1c1f27 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%; }
+  body main {
+    min-height: 90vh; }
+
+header {
+  width: 100%;
+  height: 300px;
+  background: #12141C;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  header a {
+    height: calc( 100% - (50px * 2) );
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin: calc( 50px / 2); }
+    header a img {
+      height: 100%;
+      width: auto;
+      vertical-align: top; }
+    header a:hover {
+      transform: scale(1.05); }
+
+@media (max-width: 830px) {
+  header {
+    height: 200px; }
+    header a {
+      height: calc( 100% - (40px * 2) );
+      margin: calc( 40px / 2); } }
+main.inicio {
+  width: 100%; }
+  main.inicio .cajaDesplegable {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    transition: height 0.3s ease; }
+    main.inicio .cajaDesplegable .barra {
+      position: relative;
+      height: 100px;
+      background: #33384A;
+      display: flex;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      main.inicio .cajaDesplegable .barra h1 {
+        font-size: 30px;
+        padding: calc( 50px / 2 );
+        font-weight: 600;
+        text-align: center;
+        color: #F39200; }
+    main.inicio .cajaDesplegable .escondido {
+      position: relative;
+      top: 0px;
+      height: auto;
+      width: 100%;
+      height: 100px;
+      z-index: 1;
+      transition: top 0.3s ease;
+      cursor: pointer;
+      background: #F39200;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: calc( 50px / 8 ) 4vw; }
+      main.inicio .cajaDesplegable .escondido p {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Zen Kaku Gothic Antique", sans-serif;
+        font-weight: 600;
+        color: #12141C; }
+        main.inicio .cajaDesplegable .escondido p b {
+          font-family: "Zen Kaku Gothic Antique", sans-serif;
+          font-weight: 1000; }
+  main.inicio .textos {
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px calc( 50px );
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    main.inicio .textos .texto {
+      width: calc( 50% - 50px );
+      text-align: justify;
+      color: #F39200; }
+      main.inicio .textos .texto h2 {
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: calc( 50px / 2 ); }
+      main.inicio .textos .texto p {
+        font-size: 24px;
+        font-weight: 600; }
+      main.inicio .textos .texto form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; }
+        main.inicio .textos .texto form input, main.inicio .textos .texto form textarea {
+          background: rgba(51, 56, 74, 0.5);
+          backdrop-filter: blur(2px);
+          border: #F39200 0px solid;
+          width: 100%;
+          resize: none;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 600;
+          padding: calc( 50px / 2 );
+          color: #F39200;
+          transition: all 0.3s ease;
+          cursor: pointer; }
+          main.inicio .textos .texto form input:focus, main.inicio .textos .texto form textarea:focus {
+            background: rgba(51, 56, 74, 0.8);
+            outline: none;
+            transform: scale(1.03);
+            resize: none;
+            cursor: text; }
+          main.inicio .textos .texto form input:hover, main.inicio .textos .texto form textarea:hover {
+            background: rgba(51, 56, 74, 0.8);
+            transform: scale(1.03); }
+          main.inicio .textos .texto form input::placeholder, main.inicio .textos .texto form textarea::placeholder {
+            font-size: 20px;
+            font-weight: 600;
+            color: #F39200; }
+        main.inicio .textos .texto form #nombre {
+          width: calc( 50% - (50px / 4) );
+          margin-bottom: calc(50px / 2);
+          margin-right: calc(50px / 4); }
+        main.inicio .textos .texto form #correo {
+          width: calc( 50% - (50px / 4) );
+          margin-bottom: calc(50px / 2);
+          margin-left: calc(50px / 4); }
+        main.inicio .textos .texto form textarea {
+          margin-bottom: calc(50px / 2); }
+        main.inicio .textos .texto form input[type="submit"] {
+          width: auto;
+          background: #F39200;
+          color: #12141C;
+          padding: calc( 50px / 2 ) calc( 50px / 1 ); }
+          main.inicio .textos .texto form input[type="submit"]:hover {
+            transform: scale(1.1);
+            color: #fff; }
+    main.inicio .textos .derecha h2 {
+      text-align: right; }
+    main.inicio .textos .individual {
+      width: calc( 100% - 50px ); }
+      main.inicio .textos .individual h2 {
+        text-align: center; }
+    main.inicio .textos hr {
+      border: 1px solid #F39200; }
+  main.inicio .tipo-productos {
+    width: 100%;
+    height: 800px;
+    background: #12141C;
+    display: flex;
+    flex-wrap: wrap; }
+    main.inicio .tipo-productos .producto {
+      width: 50%;
+      height: 50%;
+      display: inline-block;
+      overflow: hidden;
+      text-decoration: none; }
+      main.inicio .tipo-productos .producto .fondo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        backdrop-filter: brightness(60%);
+        -webkit-backdrop-filter: brightness(60%);
+        transition: all 0.3s ease;
+        cursor: pointer; }
+        main.inicio .tipo-productos .producto .fondo h3 {
+          color: #F39200;
+          font-weight: 900;
+          backdrop-filter: brightness(100%);
+          -webkit-backdrop-filter: brightness(100%);
+          font-size: 30px;
+          text-align: center;
+          padding: calc( 50px / 8 ) calc( 50px / 2 );
+          width: 100%;
+          background: rgba(51, 56, 74, 0.5);
+          transition: all 0.3s ease; }
+        main.inicio .tipo-productos .producto .fondo:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.4);
+          transition: all 0.3s ease;
+          opacity: 1; }
+      main.inicio .tipo-productos .producto:hover .fondo {
+        transform: scale(1.1);
+        backdrop-filter: brightness(100%);
+        -webkit-backdrop-filter: brightness(100%); }
+        main.inicio .tipo-productos .producto:hover .fondo h3 {
+          background: rgba(51, 56, 74, 0.8); }
+        main.inicio .tipo-productos .producto:hover .fondo:before {
+          opacity: 0; }
+    main.inicio .tipo-productos .replicas .fondo {
+      background-image: url("../img/tipos_productos/Replicas1.jpg"); }
+    main.inicio .tipo-productos .accesorios .fondo {
+      background-image: url("../img/tipos_productos/Accesorios3.jpg"); }
+    main.inicio .tipo-productos .equipamiento .fondo {
+      background-image: url("../img/tipos_productos/Equipamiento1.jpg"); }
+    main.inicio .tipo-productos .servicios .fondo {
+      background-image: url("../img/tipos_productos/Servicios1.jpg"); }
+
+@media (max-width: 1350px) {
+  main.inicio .tipo-productos {
+    width: 100%;
+    height: 650px;
+    flex-wrap: wrap; }
+    main.inicio .tipo-productos .producto {
+      width: 50%;
+      height: 50%; }
+      main.inicio .tipo-productos .producto .fondo h3 {
+        font-size: 30px;
+        padding: calc( 50px / 8 ) calc( 50px / 2 );
+        width: 100%; }
+    main.inicio .tipo-productos .replicas {
+      width: 100%;
+      height: calc( ( 100% / 3 ) * 2 ); }
+      main.inicio .tipo-productos .replicas .fondo h3 {
+        font-size: 35px;
+        padding: calc( 50px / 4 ) calc( 50px ); }
+    main.inicio .tipo-productos .accesorios, main.inicio .tipo-productos .equipamiento, main.inicio .tipo-productos .servicios {
+      width: calc( 100% / 3 );
+      height: calc( 100% / 3 ); } }
+@media (max-width: 1200px) {
+  main.inicio .textos {
+    padding: 4vw calc( 4vw );
+    margin: 0 auto; }
+    main.inicio .textos .texto {
+      width: calc( 50% - 4vw ); }
+      main.inicio .textos .texto h2 {
+        font-size: 2.5vw;
+        margin-bottom: calc( 4vw / 2 ); }
+      main.inicio .textos .texto p {
+        font-size: 2vw; }
+      main.inicio .textos .texto form input, main.inicio .textos .texto form textarea {
+        font-size: 1.66vw;
+        padding: calc( 4vw / 2 ); }
+        main.inicio .textos .texto form input::placeholder, main.inicio .textos .texto form textarea::placeholder {
+          font-size: 1.66vw; }
+      main.inicio .textos .texto form #nombre {
+        width: calc( 50% - (4vw / 4) );
+        margin-bottom: calc(4vw / 2);
+        margin-right: calc(4vw / 4); }
+      main.inicio .textos .texto form #correo {
+        width: calc( 50% - (4vw / 4) );
+        margin-bottom: calc(4vw / 2);
+        margin-left: calc(4vw / 4); }
+      main.inicio .textos .texto form textarea {
+        margin-bottom: calc(4vw / 2); }
+      main.inicio .textos .texto form input[type="submit"] {
+        padding: calc( 4vw / 2 ) calc( 4vw / 1 ); }
+    main.inicio .textos .individual {
+      width: calc( 100% - 4vw ); }
+      main.inicio .textos .individual h2 {
+        text-align: center; }
+    main.inicio .textos hr {
+      border: 1px solid #F39200; } }
+@media (max-width: 970px) {
+  main.inicio .cajaDesplegable .barra h1 {
+    font-size: 30px;
+    padding: calc( 50px / 2 ); }
+  main.inicio .cajaDesplegable .escondido {
+    padding: calc( 50px / 8 ) 4vw; }
+    main.inicio .cajaDesplegable .escondido p {
+      padding: 0;
+      font-size: 20px;
+      line-height: 1.25; }
+      main.inicio .cajaDesplegable .escondido p .grande {
+        display: none; }
+      main.inicio .cajaDesplegable .escondido p.pequeño {
+        display: block !important; }
+  main.inicio .textos {
+    padding: 4vw calc( 4vw );
+    margin: 0 auto; }
+    main.inicio .textos .texto {
+      width: calc( 50% - 4vw ); }
+      main.inicio .textos .texto h2 {
+        font-size: 2.5vw;
+        margin-bottom: calc( 4vw / 2 ); }
+      main.inicio .textos .texto p {
+        font-size: 2vw; }
+      main.inicio .textos .texto form input, main.inicio .textos .texto form textarea {
+        font-size: 1.66vw;
+        padding: calc( 4vw / 2 ); }
+        main.inicio .textos .texto form input::placeholder, main.inicio .textos .texto form textarea::placeholder {
+          font-size: 1.66vw; }
+      main.inicio .textos .texto form #nombre {
+        width: calc( 50% - (4vw / 4) );
+        margin-bottom: calc(4vw / 2);
+        margin-right: calc(4vw / 4); }
+      main.inicio .textos .texto form #correo {
+        width: calc( 50% - (4vw / 4) );
+        margin-bottom: calc(4vw / 2);
+        margin-left: calc(4vw / 4); }
+      main.inicio .textos .texto form textarea {
+        margin-bottom: calc(4vw / 2); }
+      main.inicio .textos .texto form input[type="submit"] {
+        padding: calc( 4vw / 2 ) calc( 4vw / 1 ); }
+    main.inicio .textos .individual {
+      width: calc( 100% - 4vw ); }
+      main.inicio .textos .individual h2 {
+        text-align: center; }
+    main.inicio .textos hr {
+      border: 1px solid #F39200; } }
+@media (max-width: 770px) {
+  main.inicio .cajaDesplegable .barra h1 {
+    font-size: 30px;
+    padding: calc( 50px / 2 ); }
+  main.inicio .cajaDesplegable .escondido {
+    padding: calc( 50px / 8 ) 4vw; }
+  main.inicio .textos {
+    padding: 3.5vw;
+    margin: 0 auto; }
+    main.inicio .textos .texto {
+      width: calc( 50% - 3.5vw ); }
+      main.inicio .textos .texto h2 {
+        font-size: 3.5vw;
+        margin-bottom: calc( 3.5vw / 2 ); }
+      main.inicio .textos .texto p {
+        font-size: 2.8vw; }
+      main.inicio .textos .texto form input, main.inicio .textos .texto form textarea {
+        font-size: 2.5vw;
+        padding: calc( 3.5vw / 2 ); }
+        main.inicio .textos .texto form input::placeholder, main.inicio .textos .texto form textarea::placeholder {
+          font-size: 2.5vw; }
+      main.inicio .textos .texto form #nombre {
+        width: calc( 50% - (3.5vw / 4) );
+        margin-bottom: calc(3.5vw / 2);
+        margin-right: calc(3.5vw / 4); }
+      main.inicio .textos .texto form #correo {
+        width: calc( 50% - (3.5vw / 4) );
+        margin-bottom: calc(3.5vw / 2);
+        margin-left: calc(3.5vw / 4); }
+      main.inicio .textos .texto form textarea {
+        margin-bottom: calc(3.5vw / 2); }
+      main.inicio .textos .texto form input[type="submit"] {
+        padding: calc( 3.5vw / 2 ) calc( 3.5vw / 1 ); }
+      main.inicio .textos .texto.derecha, main.inicio .textos .texto.izquierda {
+        display: none; }
+      main.inicio .textos .texto.individual {
+        display: block !important;
+        width: 100%; }
+        main.inicio .textos .texto.individual h2 {
+          text-align: center; }
+    main.inicio .textos hr {
+      display: none; }
+  main.inicio .tipo-productos {
+    width: 100%;
+    height: 500px;
+    flex-wrap: wrap; }
+    main.inicio .tipo-productos .producto .fondo h3 {
+      font-size: 30px;
+      padding: calc( 50px / 8 ) calc( 50px / 2 ); }
+    main.inicio .tipo-productos .replicas {
+      width: 50%;
+      height: 50%; }
+      main.inicio .tipo-productos .replicas .fondo h3 {
+        font-size: 30px;
+        padding: calc( 50px / 8 ) calc( 50px / 2 ); }
+    main.inicio .tipo-productos .accesorios, main.inicio .tipo-productos .equipamiento, main.inicio .tipo-productos .servicios {
+      width: 50%;
+      height: 50%; } }
+@media (max-width: 700px) {
+  main.inicio .cajaDesplegable .barra h1 {
+    font-size: 4.24vw;
+    padding: calc( 50px / 2 ); }
+  main.inicio .cajaDesplegable .escondido {
+    padding: calc( 50px / 8 ) 4vw; }
+    main.inicio .cajaDesplegable .escondido p {
+      font-size: 2.8vw; }
+  main.inicio .textos {
+    padding: 3.5vw;
+    margin: 0 auto; }
+    main.inicio .textos .texto {
+      width: calc( 50% - 3.5vw ); }
+      main.inicio .textos .texto h2 {
+        font-size: 3.5vw;
+        margin-bottom: calc( 3.5vw / 2 ); }
+      main.inicio .textos .texto p {
+        font-size: 2.8vw; }
+      main.inicio .textos .texto form input, main.inicio .textos .texto form textarea {
+        font-size: 2.5vw;
+        padding: calc( 3.5vw / 2 ); }
+        main.inicio .textos .texto form input::placeholder, main.inicio .textos .texto form textarea::placeholder {
+          font-size: 2.5vw; }
+      main.inicio .textos .texto form #nombre {
+        width: calc( 50% - (3.5vw / 4) );
+        margin-bottom: calc(3.5vw / 2);
+        margin-right: calc(3.5vw / 4); }
+      main.inicio .textos .texto form #correo {
+        width: calc( 50% - (3.5vw / 4) );
+        margin-bottom: calc(3.5vw / 2);
+        margin-left: calc(3.5vw / 4); }
+      main.inicio .textos .texto form textarea {
+        margin-bottom: calc(3.5vw / 2); }
+      main.inicio .textos .texto form input[type="submit"] {
+        padding: calc( 3.5vw / 2 ) calc( 3.5vw / 1 ); }
+      main.inicio .textos .texto.derecha, main.inicio .textos .texto.izquierda {
+        display: none; }
+      main.inicio .textos .texto.individual {
+        display: block !important;
+        width: 100%; }
+        main.inicio .textos .texto.individual h2 {
+          text-align: center; }
+    main.inicio .textos hr {
+      display: none; }
+  main.inicio .tipo-productos {
+    height: 400px; }
+    main.inicio .tipo-productos .producto .fondo h3 {
+      font-size: 20px; }
+    main.inicio .tipo-productos .replicas {
+      width: 50%;
+      height: 50%; }
+      main.inicio .tipo-productos .replicas .fondo h3 {
+        font-size: 20px; } }
+@media (max-width: 445px) {
+  main.inicio .cajaDesplegable .barra h1 {
+    font-size: 6vw;
+    padding: calc( 50px / 2 ); }
+  main.inicio .cajaDesplegable .escondido {
+    padding: calc( 50px / 8 ) 4vw; }
+    main.inicio .cajaDesplegable .escondido p {
+      font-size: 3.3vw;
+      line-height: 1.7; }
+      main.inicio .cajaDesplegable .escondido p b {
+        display: none; }
+  main.inicio .textos {
+    padding: 3.5vw;
+    margin: 0 auto; }
+    main.inicio .textos .texto {
+      width: calc( 50% - 3.5vw ); }
+      main.inicio .textos .texto h2 {
+        font-size: 4vw;
+        margin-bottom: calc( 3.5vw / 2 ); }
+      main.inicio .textos .texto p {
+        font-size: 3.3vw; }
+      main.inicio .textos .texto form input, main.inicio .textos .texto form textarea {
+        font-size: 3vw;
+        padding: calc( 3.5vw / 2 ); }
+        main.inicio .textos .texto form input::placeholder, main.inicio .textos .texto form textarea::placeholder {
+          font-size: 3vw; }
+      main.inicio .textos .texto form #nombre {
+        width: calc( 50% - (3.5vw / 4) );
+        margin-bottom: calc(3.5vw / 2);
+        margin-right: calc(3.5vw / 4); }
+      main.inicio .textos .texto form #correo {
+        width: calc( 50% - (3.5vw / 4) );
+        margin-bottom: calc(3.5vw / 2);
+        margin-left: calc(3.5vw / 4); }
+      main.inicio .textos .texto form textarea {
+        margin-bottom: calc(3.5vw / 2); }
+      main.inicio .textos .texto form input[type="submit"] {
+        padding: calc( 3.5vw / 4 ) calc( 3.5vw / 2 ); }
+      main.inicio .textos .texto.derecha, main.inicio .textos .texto.izquierda {
+        display: none; }
+      main.inicio .textos .texto.individual {
+        display: block !important;
+        width: 100%; }
+        main.inicio .textos .texto.individual h2 {
+          text-align: center; }
+    main.inicio .textos hr {
+      display: none; }
+  main.inicio .tipo-productos {
+    height: 400px; }
+    main.inicio .tipo-productos .producto .fondo h3 {
+      font-size: 20px; }
+    main.inicio .tipo-productos .replicas {
+      width: 50%;
+      height: 50%; }
+      main.inicio .tipo-productos .replicas .fondo h3 {
+        font-size: 20px; } }
+@media (max-width: 375px) {
+  main.inicio .cajaDesplegable .escondido p {
+    line-height: 2; }
+    main.inicio .cajaDesplegable .escondido p b {
+      display: none; }
+  main.inicio .tipo-productos {
+    height: 800px; }
+    main.inicio .tipo-productos .producto .fondo h3 {
+      font-size: 20px; }
+    main.inicio .tipo-productos .replicas, main.inicio .tipo-productos .accesorios, main.inicio .tipo-productos .equipamiento, main.inicio .tipo-productos .servicios {
+      width: 100%;
+      height: 25%; } }
+main.replicas .cajaDesplegable {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.3s ease; }
+  main.replicas .cajaDesplegable .barra {
+    position: relative;
+    height: 100px;
+    background: #33384A;
+    display: flex;
+    z-index: 2; }
+    main.replicas .cajaDesplegable .barra button {
+      width: calc( 100% / 8 );
+      display: block;
+      background: #33384A;
+      font-size: 24px;
+      font-weight: 600;
+      color: #F39200;
+      border: none;
+      transition: background 0.3s ease;
+      cursor: pointer; }
+      main.replicas .cajaDesplegable .barra button:hover {
+        background: rgba(18, 20, 28, 0.5); }
+      main.replicas .cajaDesplegable .barra button.seleccionado {
+        background: rgba(18, 20, 28, 0.8); }
+  main.replicas .cajaDesplegable .escondido {
+    position: absolute;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    padding-top: 100px;
+    transition: top 0.3s ease; }
+    main.replicas .cajaDesplegable .escondido .contenido-escondido {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: -100px;
+      height: 100px;
+      transition: top 0.3s ease;
+      background: rgba(51, 56, 74, 0.5);
+      backdrop-filter: blur(2px);
+      color: #F39200;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600; }
+    main.replicas .cajaDesplegable .escondido #contenidoTiendas label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease; }
+      main.replicas .cajaDesplegable .escondido #contenidoTiendas label:hover {
+        background: rgba(51, 56, 74, 0.5); }
+    main.replicas .cajaDesplegable .escondido #contenidoTiendas input[type="checkbox"]:checked + label,
+    main.replicas .cajaDesplegable .escondido #contenidoTiendas input[type="checkbox"]:checked + label:hover {
+      background: #F39200;
+      color: rgba(18, 20, 28, 0.8); }
+    main.replicas .cajaDesplegable .escondido #contenidoTiendas input {
+      display: none; }
+    main.replicas .cajaDesplegable .escondido #contenidoFabricantes {
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow: scroll;
+      overflow-x: hidden; }
+      main.replicas .cajaDesplegable .escondido #contenidoFabricantes::-webkit-scrollbar {
+        width: 5px; }
+      main.replicas .cajaDesplegable .escondido #contenidoFabricantes::-webkit-scrollbar-track {
+        background: #f1f1f100; }
+      main.replicas .cajaDesplegable .escondido #contenidoFabricantes::-webkit-scrollbar-thumb {
+        background: #F39200; }
+      main.replicas .cajaDesplegable .escondido #contenidoFabricantes label {
+        width: calc( 100% / 8 );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: calc( 100% - 3 );
+        font-size: 18px;
+        padding: calc( 50px / 16 ) calc( 50px / 8 );
+        transition: all 0.3s ease; }
+        main.replicas .cajaDesplegable .escondido #contenidoFabricantes label:hover {
+          background: rgba(51, 56, 74, 0.5); }
+      main.replicas .cajaDesplegable .escondido #contenidoFabricantes input[type="checkbox"]:checked + label,
+      main.replicas .cajaDesplegable .escondido #contenidoFabricantes input[type="checkbox"]:checked + label:hover {
+        background: #F39200;
+        color: rgba(18, 20, 28, 0.8); }
+      main.replicas .cajaDesplegable .escondido #contenidoFabricantes input {
+        display: none; }
+    main.replicas .cajaDesplegable .escondido #contenidoCategorias label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      transition: background 0.3s ease, color 0.3s ease; }
+      main.replicas .cajaDesplegable .escondido #contenidoCategorias label:hover {
+        background: rgba(51, 56, 74, 0.5); }
+    main.replicas .cajaDesplegable .escondido #contenidoCategorias input[type="checkbox"]:checked + label,
+    main.replicas .cajaDesplegable .escondido #contenidoCategorias input[type="checkbox"]:checked + label:hover {
+      background: #F39200;
+      color: rgba(18, 20, 28, 0.8); }
+    main.replicas .cajaDesplegable .escondido #contenidoCategorias input {
+      display: none; }
+    main.replicas .cajaDesplegable .escondido #contenidoEstado label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease; }
+      main.replicas .cajaDesplegable .escondido #contenidoEstado label:hover {
+        background: rgba(51, 56, 74, 0.5); }
+    main.replicas .cajaDesplegable .escondido #contenidoEstado input[type="checkbox"]:checked + label,
+    main.replicas .cajaDesplegable .escondido #contenidoEstado input[type="checkbox"]:checked + label:hover {
+      background: #F39200;
+      color: rgba(18, 20, 28, 0.8); }
+    main.replicas .cajaDesplegable .escondido #contenidoEstado input {
+      display: none; }
+    main.replicas .cajaDesplegable .escondido #contenidoPrecios label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease; }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label:hover {
+        background: rgba(51, 56, 74, 0.5); }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label input[type="number"]::-webkit-inner-spin-button,
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0; }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label input {
+        margin-left: calc( 50px / 4 );
+        background: rgba(51, 56, 74, 0.5);
+        backdrop-filter: blur(2px);
+        border: #F39200 0px solid;
+        width: 100px;
+        resize: none;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        padding: calc( 50px / 4 ) calc( 50px / 2 );
+        color: #F39200;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        -moz-appearance: textfield; }
+        main.replicas .cajaDesplegable .escondido #contenidoPrecios label input:focus {
+          background: rgba(18, 20, 28, 0.5);
+          outline: none;
+          transform: scale(1.03);
+          resize: none;
+          cursor: text; }
+        main.replicas .cajaDesplegable .escondido #contenidoPrecios label input:hover {
+          background: rgba(18, 20, 28, 0.5);
+          transform: scale(1.03); }
+        main.replicas .cajaDesplegable .escondido #contenidoPrecios label input::placeholder {
+          font-size: 20px;
+          font-weight: 600;
+          color: #F39200; }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label.changed {
+        background: #F39200;
+        color: rgba(18, 20, 28, 0.8); }
+        main.replicas .cajaDesplegable .escondido #contenidoPrecios label.changed input {
+          background: #12141C; }
+    main.replicas .cajaDesplegable .escondido #contenidoOrdenar label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease; }
+      main.replicas .cajaDesplegable .escondido #contenidoOrdenar label:hover {
+        background: rgba(51, 56, 74, 0.5); }
+    main.replicas .cajaDesplegable .escondido #contenidoOrdenar input[type="radio"]:checked + label,
+    main.replicas .cajaDesplegable .escondido #contenidoOrdenar input[type="radio"]:checked + label:hover {
+      background: #F39200;
+      color: rgba(18, 20, 28, 0.8); }
+    main.replicas .cajaDesplegable .escondido #contenidoOrdenar input {
+      display: none; }
+main.replicas .principal {
+  display: grid;
+  grid-template-columns: 1fr 1200px 1fr; }
+  main.replicas .principal .productos #filtro-nombre {
+    padding: calc( 50px / 4 );
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main.replicas .principal .productos #filtro-nombre input {
+      background: rgba(51, 56, 74, 0.5);
+      backdrop-filter: blur(2px);
+      border: #F39200 0px solid;
+      width: 600px;
+      resize: none;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      padding: calc( 50px / 4 );
+      color: #F39200;
+      transition: all 0.3s ease;
+      cursor: pointer; }
+      main.replicas .principal .productos #filtro-nombre input:focus {
+        background: rgba(51, 56, 74, 0.8);
+        outline: none;
+        transform: scale(1.03);
+        resize: none;
+        cursor: text; }
+      main.replicas .principal .productos #filtro-nombre input:hover {
+        background: rgba(51, 56, 74, 0.8);
+        transform: scale(1.03); }
+      main.replicas .principal .productos #filtro-nombre input::placeholder {
+        font-size: 20px;
+        font-weight: 600;
+        color: #F39200; }
+  main.replicas .principal .productos #contador {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: #F39200;
+    padding: calc( 50px / 4 );
+    padding-bottom: calc( 50px / 2 ); }
+  main.replicas .principal .productos .caja-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    list-style: none; }
+    main.replicas .principal .productos .caja-grid li {
+      background: rgba(51, 56, 74, 0.5);
+      backdrop-filter: blur(2px);
+      overflow: hidden;
+      transition: all 0.3s ease; }
+      main.replicas .principal .productos .caja-grid li .tarjeta {
+        color: #F39200;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 20px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .nombre {
+          padding: calc( 50px / 4 );
+          padding-bottom: 0;
+          font-size: 22px;
+          height: 111.5px;
+          font-weight: 700; }
+          main.replicas .principal .productos .caja-grid li .tarjeta .nombre::first-letter {
+            text-transform: uppercase; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .marca {
+          padding: calc( 50px / 4 );
+          padding-bottom: 0;
+          font-weight: 500; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .precio {
+          padding: calc( 50px / 4 );
+          padding-bottom: 0;
+          font-size: 22px;
+          font-weight: 700; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .tienda {
+          padding: calc( 50px / 4 );
+          padding-bottom: 0;
+          font-weight: 600; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div {
+          width: 100%;
+          aspect-ratio: 1/1;
+          padding: calc( 50px / 4 ); }
+          main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div img {
+            border: 2px #F39200 solid;
+            vertical-align: center;
+            width: 100%;
+            height: auto; }
+      main.replicas .principal .productos .caja-grid li:hover {
+        background: rgba(18, 20, 28, 0.5); }
+    main.replicas .principal .productos .caja-grid > :nth-child(8n), main.replicas .principal .productos .caja-grid > :nth-child(8n-1), main.replicas .principal .productos .caja-grid > :nth-child(8n-2), main.replicas .principal .productos .caja-grid > :nth-child(8n-3) {
+      background: rgba(18, 20, 28, 0.5); }
+      main.replicas .principal .productos .caja-grid > :nth-child(8n):hover, main.replicas .principal .productos .caja-grid > :nth-child(8n-1):hover, main.replicas .principal .productos .caja-grid > :nth-child(8n-2):hover, main.replicas .principal .productos .caja-grid > :nth-child(8n-3):hover {
+        background: rgba(51, 56, 74, 0.8); }
+    main.replicas .principal .productos .caja-grid > :nth-child(8n-4), main.replicas .principal .productos .caja-grid > :nth-child(8n-5), main.replicas .principal .productos .caja-grid > :nth-child(8n-6), main.replicas .principal .productos .caja-grid > :nth-child(8n-7) {
+      background: rgba(51, 56, 74, 0.5); }
+      main.replicas .principal .productos .caja-grid > :nth-child(8n-4):hover, main.replicas .principal .productos .caja-grid > :nth-child(8n-5):hover, main.replicas .principal .productos .caja-grid > :nth-child(8n-6):hover, main.replicas .principal .productos .caja-grid > :nth-child(8n-7):hover {
+        background: rgba(18, 20, 28, 0.8); }
+  main.replicas .principal .productos #bt-cargar-mas {
+    margin: 50px auto;
+    padding: calc( 50px / 2 ) 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F39200;
+    backdrop-filter: blur(2px);
+    border: #F39200 0px solid;
+    width: 600px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    padding: calc( 50px / 4 );
+    color: #12141C;
+    transition: all 0.3s ease;
+    cursor: pointer; }
+    main.replicas .principal .productos #bt-cargar-mas:hover {
+      color: #fff;
+      transform: scale(1.03); }
+    main.replicas .principal .productos #bt-cargar-mas::placeholder {
+      font-size: 20px;
+      font-weight: 600;
+      color: #F39200; }
+
+@media (max-width: 1350px) {
+  main.replicas .cajaDesplegable .barra {
+    flex-wrap: wrap; }
+    main.replicas .cajaDesplegable .barra button {
+      width: calc( 100% / 4 );
+      height: 50%;
+      display: block;
+      font-size: 18px; }
+  main.replicas .cajaDesplegable .escondido .contenido-escondido {
+    font-size: 18px; }
+  main.replicas .cajaDesplegable .escondido #contenidoTiendas label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes::-webkit-scrollbar {
+    width: 4px; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes label {
+    width: calc( 100% / 5 );
+    height: calc( 100% - 3 );
+    font-size: 18px;
+    padding: calc( 40px / 16 ) calc( 40px / 8 ); }
+  main.replicas .cajaDesplegable .escondido #contenidoCategorias label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoEstado label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoPrecios label {
+    height: 100%;
+    width: 100%; }
+    main.replicas .cajaDesplegable .escondido #contenidoPrecios label input {
+      margin-left: calc( 40px / 4 );
+      width: 80px;
+      font-size: 18px;
+      padding: calc( 40px / 4 ) calc( 40px / 2 ); }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label input::placeholder {
+        font-size: 18px; }
+  main.replicas .cajaDesplegable .escondido #contenidoOrdenar label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .principal {
+    grid-template-columns: 1fr 800px 1fr; }
+    main.replicas .principal .productos #filtro-nombre {
+      padding: calc( 40px / 4 );
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      main.replicas .principal .productos #filtro-nombre input {
+        width: 450px;
+        font-size: 18px;
+        padding: calc( 40px / 4 ); }
+        main.replicas .principal .productos #filtro-nombre input::placeholder {
+          font-size: 18px; }
+    main.replicas .principal .productos #contador {
+      font-size: 22px;
+      padding: calc( 40px / 4 );
+      padding-bottom: calc( 40px / 2 ); }
+    main.replicas .principal .productos .caja-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      main.replicas .principal .productos .caja-grid li .tarjeta {
+        font-size: 18px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .nombre {
+          padding: calc( 40px / 4 );
+          font-size: 20px;
+          height: 110px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .marca {
+          padding: calc( 40px / 4 ); }
+        main.replicas .principal .productos .caja-grid li .tarjeta .precio {
+          padding: calc( 40px / 4 );
+          font-size: 20px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .tienda {
+          padding: calc( 40px / 4 ); }
+        main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div {
+          padding: calc( 40px / 4 ); }
+          main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div img {
+            border: 2px #F39200 solid; }
+    main.replicas .principal .productos #bt-cargar-mas {
+      margin: 40px auto;
+      padding: calc( 40px / 2 ) 40px;
+      width: 450px;
+      font-size: 20px;
+      padding: calc( 40px / 4 ); }
+      main.replicas .principal .productos #bt-cargar-mas::placeholder {
+        font-size: 20px; } }
+@media (max-width: 830px) {
+  main.replicas .cajaDesplegable .barra button {
+    width: calc( 100% / 4 );
+    height: 50%;
+    display: block;
+    font-size: 16px; }
+  main.replicas .cajaDesplegable .escondido .contenido-escondido {
+    font-size: 16px; }
+  main.replicas .cajaDesplegable .escondido #contenidoTiendas label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes::-webkit-scrollbar {
+    width: 4px; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes label {
+    width: calc( 100% / 4 );
+    height: calc( 100% - 3 );
+    font-size: 14px;
+    padding: calc( 30px / 16 ) calc( 30px / 8 ); }
+  main.replicas .cajaDesplegable .escondido #contenidoCategorias {
+    flex-wrap: wrap;
+    justify-content: center; }
+    main.replicas .cajaDesplegable .escondido #contenidoCategorias label {
+      height: 50%;
+      width: calc( 100% / 3 ); }
+  main.replicas .cajaDesplegable .escondido #contenidoEstado label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoPrecios label {
+    height: 100%;
+    width: 100%; }
+    main.replicas .cajaDesplegable .escondido #contenidoPrecios label input {
+      margin-left: calc( 30px / 4 );
+      width: 60px;
+      font-size: 16px;
+      padding: calc( 30px / 4 ) calc( 30px / 2 ); }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label input::placeholder {
+        font-size: 16px; }
+  main.replicas .cajaDesplegable .escondido #contenidoOrdenar label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .principal {
+    grid-template-columns: 1fr 400px 1fr; }
+    main.replicas .principal .productos #filtro-nombre {
+      padding: calc( 30px / 4 ); }
+      main.replicas .principal .productos #filtro-nombre input {
+        width: 200px;
+        font-size: 16px;
+        padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos #filtro-nombre input::placeholder {
+          font-size: 16px; }
+    main.replicas .principal .productos #contador {
+      font-size: 20px;
+      padding: calc( 30px / 4 );
+      padding-bottom: calc( 30px / 2 ); }
+    main.replicas .principal .productos .caja-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      main.replicas .principal .productos .caja-grid li .tarjeta {
+        font-size: 16px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .nombre {
+          padding: calc( 30px / 4 );
+          font-size: 18px;
+          height: 96px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .marca {
+          padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos .caja-grid li .tarjeta .precio {
+          padding: calc( 30px / 4 );
+          font-size: 18px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .tienda {
+          padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div {
+          padding: calc( 30px / 4 ); }
+          main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div img {
+            border: 2px #F39200 solid; }
+      main.replicas .principal .productos .caja-grid > :nth-child(4n), main.replicas .principal .productos .caja-grid > :nth-child(4n-1) {
+        background: rgba(18, 20, 28, 0.5); }
+        main.replicas .principal .productos .caja-grid > :nth-child(4n):hover, main.replicas .principal .productos .caja-grid > :nth-child(4n-1):hover {
+          background: rgba(51, 56, 74, 0.8); }
+      main.replicas .principal .productos .caja-grid > :nth-child(4n-2), main.replicas .principal .productos .caja-grid > :nth-child(4n-3) {
+        background: rgba(51, 56, 74, 0.5); }
+        main.replicas .principal .productos .caja-grid > :nth-child(4n-2):hover, main.replicas .principal .productos .caja-grid > :nth-child(4n-3):hover {
+          background: rgba(18, 20, 28, 0.8); }
+    main.replicas .principal .productos #bt-cargar-mas {
+      margin: 30px auto;
+      padding: calc( 30px / 2 ) 30px;
+      width: 200px;
+      font-size: 18px;
+      padding: calc( 30px / 4 ); }
+      main.replicas .principal .productos #bt-cargar-mas::placeholder {
+        font-size: 18px; } }
+@media (max-width: 550px) {
+  main.replicas .cajaDesplegable .barra button {
+    width: calc( 100% / 4 );
+    height: 50%;
+    display: block;
+    font-size: 14px; }
+  main.replicas .cajaDesplegable .escondido .contenido-escondido {
+    font-size: 14px; }
+  main.replicas .cajaDesplegable .escondido #contenidoTiendas label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes::-webkit-scrollbar {
+    width: 4px; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes label {
+    width: calc( 100% / 3 );
+    height: calc( 100% - 3 );
+    font-size: 12px;
+    padding: calc( 30px / 16 ) calc( 30px / 8 ); }
+  main.replicas .cajaDesplegable .escondido #contenidoCategorias label {
+    height: 50%;
+    width: calc( 100% / 3 ); }
+  main.replicas .cajaDesplegable .escondido #contenidoEstado label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoPrecios label {
+    height: 100%;
+    width: 100%; }
+    main.replicas .cajaDesplegable .escondido #contenidoPrecios label input {
+      margin-left: calc( 30px / 4 );
+      width: 50px;
+      font-size: 12px;
+      padding: calc( 30px / 4 ) calc( 30px / 2 ); }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label input::placeholder {
+        font-size: 12px; }
+  main.replicas .cajaDesplegable .escondido #contenidoOrdenar {
+    flex-wrap: wrap;
+    justify-content: center; }
+    main.replicas .cajaDesplegable .escondido #contenidoOrdenar label {
+      height: 50%;
+      width: 50%; }
+  main.replicas .principal {
+    grid-template-columns: 1fr 400px 1fr; }
+    main.replicas .principal .productos #filtro-nombre {
+      padding: calc( 30px / 4 ); }
+      main.replicas .principal .productos #filtro-nombre input {
+        width: 200px;
+        font-size: 14px;
+        padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos #filtro-nombre input::placeholder {
+          font-size: 14px; }
+    main.replicas .principal .productos #contador {
+      font-size: 18px;
+      padding: calc( 30px / 4 );
+      padding-bottom: calc( 30px / 2 ); }
+    main.replicas .principal .productos .caja-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      main.replicas .principal .productos .caja-grid li .tarjeta {
+        font-size: 14px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .nombre {
+          padding: calc( 30px / 4 );
+          font-size: 16px;
+          height: 87px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .marca {
+          padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos .caja-grid li .tarjeta .precio {
+          padding: calc( 30px / 4 );
+          font-size: 16px; }
+        main.replicas .principal .productos .caja-grid li .tarjeta .tienda {
+          padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div {
+          padding: calc( 30px / 4 ); }
+          main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div img {
+            border: 2px #F39200 solid; }
+    main.replicas .principal .productos #bt-cargar-mas {
+      margin: 30px auto;
+      padding: calc( 30px / 2 ) 30px;
+      width: 200px;
+      font-size: 16px;
+      padding: calc( 30px / 4 ); }
+      main.replicas .principal .productos #bt-cargar-mas::placeholder {
+        font-size: 16px; } }
+@media (max-width: 450px) {
+  main.replicas .cajaDesplegable .barra button {
+    width: calc( 100% / 4 );
+    height: 50%;
+    font-size: 3.1vw; }
+  main.replicas .cajaDesplegable .escondido .contenido-escondido {
+    font-size: 3.1vw; }
+  main.replicas .cajaDesplegable .escondido #contenidoTiendas label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes::-webkit-scrollbar {
+    width: 3px; }
+  main.replicas .cajaDesplegable .escondido #contenidoFabricantes label {
+    width: calc( 100% / 3 );
+    height: calc( 100% - 3 );
+    font-size: 3.1vw;
+    padding: calc( 30px / 16 ) calc( 30px / 8 ); }
+  main.replicas .cajaDesplegable .escondido #contenidoCategorias label {
+    height: 50%;
+    width: calc( 100% / 3 ); }
+  main.replicas .cajaDesplegable .escondido #contenidoEstado label {
+    height: 100%;
+    width: 100%; }
+  main.replicas .cajaDesplegable .escondido #contenidoPrecios {
+    flex-wrap: wrap;
+    justify-content: center; }
+    main.replicas .cajaDesplegable .escondido #contenidoPrecios label {
+      height: 50%;
+      width: 100%; }
+      main.replicas .cajaDesplegable .escondido #contenidoPrecios label input {
+        margin-left: calc( 30px / 4 );
+        width: 14vw;
+        font-size: 2.7vw;
+        padding: calc( 30px / 4 ) 0; }
+        main.replicas .cajaDesplegable .escondido #contenidoPrecios label input::placeholder {
+          font-size: 2.7vw; }
+  main.replicas .cajaDesplegable .escondido #contenidoOrdenar label {
+    height: 50%;
+    width: 50%; }
+  main.replicas .principal {
+    grid-template-columns: 1fr 1fr; }
+    main.replicas .principal .columna {
+      display: none; }
+    main.replicas .principal .productos {
+      grid-column: 1/3; }
+      main.replicas .principal .productos #filtro-nombre {
+        padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos #filtro-nombre input {
+          width: 50%;
+          font-size: 3.1vw;
+          padding: calc( 30px / 4 ); }
+          main.replicas .principal .productos #filtro-nombre input::placeholder {
+            font-size: 3.1vw; }
+      main.replicas .principal .productos #contador {
+        font-size: 4vw;
+        padding: calc( 30px / 4 );
+        padding-bottom: calc( 30px / 2 ); }
+      main.replicas .principal .productos .caja-grid {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); }
+        main.replicas .principal .productos .caja-grid li .tarjeta {
+          font-size: 3.1vw; }
+          main.replicas .principal .productos .caja-grid li .tarjeta .nombre {
+            padding: calc( 30px / 4 );
+            font-size: 3.55vw;
+            height: 19.33vw; }
+          main.replicas .principal .productos .caja-grid li .tarjeta .marca {
+            padding: calc( 30px / 4 ); }
+          main.replicas .principal .productos .caja-grid li .tarjeta .precio {
+            padding: calc( 30px / 4 );
+            font-size: 3.55vw; }
+          main.replicas .principal .productos .caja-grid li .tarjeta .tienda {
+            padding: calc( 30px / 4 ); }
+          main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div {
+            padding: calc( 30px / 4 ); }
+            main.replicas .principal .productos .caja-grid li .tarjeta .imagen-div img {
+              border: 2px #F39200 solid; }
+      main.replicas .principal .productos #bt-cargar-mas {
+        margin: 30px auto;
+        padding: calc( 30px / 2 ) 30px;
+        width: 50%;
+        font-size: 3.55vw;
+        padding: calc( 30px / 4 ); }
+        main.replicas .principal .productos #bt-cargar-mas::placeholder {
+          font-size: 3.55vw; } }
+footer {
+  width: 100%;
+  background: #12141C;
+  color: #F39200;
+  text-align: center; }
+  footer .redes-sociales h2 {
+    padding: calc( 50px / 2 );
+    font-size: 30px;
+    font-weight: 900; }
+  footer .redes-sociales .caja {
+    display: flex;
+    justify-content: space-around;
+    border-top: #F39200 1px solid;
+    border-bottom: #F39200 1px solid; }
+    footer .redes-sociales .caja a {
+      text-decoration: none;
+      width: 100%;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease; }
+      footer .redes-sociales .caja a i {
+        font-size: 50px;
+        color: #F39200;
+        transition: all 0.3s ease; }
+      footer .redes-sociales .caja a.instagram:hover {
+        background: rgba(51, 56, 74, 0.5); }
+        footer .redes-sociales .caja a.instagram:hover i {
+          color: #c13584;
+          transform: scale(1.2); }
+      footer .redes-sociales .caja a.twitter:hover {
+        background: rgba(51, 56, 74, 0.5); }
+        footer .redes-sociales .caja a.twitter:hover i {
+          color: #1D9BF0;
+          transform: scale(1.2); }
+      footer .redes-sociales .caja a.youtube:hover {
+        background: rgba(51, 56, 74, 0.5); }
+        footer .redes-sociales .caja a.youtube:hover i {
+          color: red;
+          transform: scale(1.2); }
+      footer .redes-sociales .caja a.tiktok:hover {
+        background: rgba(51, 56, 74, 0.5); }
+        footer .redes-sociales .caja a.tiktok:hover i {
+          color: #FE2C55;
+          transform: scale(1.2); }
+  footer .legal p {
+    padding: calc( 50px / 4 );
+    font-size: 20px;
+    font-weight: 400; }
+
+@media (max-width: 1200px) {
+  footer .redes-sociales h2 {
+    padding: calc( 4vw / 2 );
+    font-size: 2.5vw; }
+  footer .redes-sociales .caja a {
+    width: 100%;
+    height: 75px; }
+    footer .redes-sociales .caja a i {
+      font-size: 50px; }
+  footer .legal p {
+    padding: calc( 4vw / 4 );
+    font-size: 1.66vw; } }
+@media (max-width: 770px) {
+  footer .redes-sociales h2 {
+    padding: calc( 3.5vw / 2 );
+    font-size: 3.5vw; }
+  footer .redes-sociales .caja a {
+    width: 100%;
+    height: 50px; }
+    footer .redes-sociales .caja a i {
+      font-size: 30px; }
+  footer .legal p {
+    padding: calc( 3.5vw / 4 );
+    font-size: 2.5vw; } }
+@media (max-width: 445px) {
+  footer .redes-sociales h2 {
+    padding: calc( 3.5vw / 2 );
+    font-size: 4vw; }
+  footer .redes-sociales .caja a {
+    width: 100%;
+    height: 50px; }
+    footer .redes-sociales .caja a i {
+      font-size: 30px; }
+  footer .legal p {
+    padding: calc( 3.5vw / 4 );
+    font-size: 3vw; } }
+
+/*# sourceMappingURL=index.css.map */

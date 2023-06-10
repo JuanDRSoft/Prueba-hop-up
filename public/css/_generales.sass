@@ -1,0 +1,112 @@
+$naranja: #F39200
+$azulOscuro: #12141C
+$azulMedio: #fff
+$azulClaro: #33384A
+
+$azulOscuroTransparente1: rgba(18, 20, 28, 0.50)
+$azulOscuroTransparente2: rgba(18, 20, 28, 0.80)
+$azulClaroTransparente1: rgba(51, 56, 74, 0.50)
+$azulClaroTransparente2: rgba(51, 56, 74, 0.80)
+
+$fuente1: 'Zen Kaku Gothic Antique', sans-serif
+$fuente2: 'Montserrat', sans-serif
+
+$margen: 50px
+$margen1350: 40px
+$margen1200: 4vw
+$margen830: 30px
+$margen770: 3.5vw
+
+
+//GENERALES
+*
+    padding: 0
+    margin: 0
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+    &::selection
+        color: #fff
+        background: $naranja
+
+// BARRA
+
+body::-webkit-scrollbar
+    width: 0px
+
+// body::-webkit-scrollbar-track
+//     background: transparent
+
+// body::-webkit-scrollbar-thumb
+//     background: $naranja
+//     border: #fff 1px solid
+//     transition: background 0.3s ease
+//     border-radius: 20px
+
+// body::-webkit-scrollbar-thumb:hover
+//     background: $naranja
+
+// body.show-scrollbar::-webkit-scrollbar
+//     display: block
+
+// body.show-scrollbar::-webkit-scrollbar-thumb
+//     opacity: 0.7
+
+body
+    color: #fff
+    font-family: $fuente1
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.5
+    overflow: overlay
+    overflow-x: hidden
+    background: linear-gradient(-55deg, #15171b 0%, #1b1d27 50%, #20232c 50%, #1c1f27 100%)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 100%
+
+    main
+        min-height: 90vh
+
+
+
+
+
+
+
+
+
+    // body::-webkit-scrollbar
+    //     width: 15px
+
+    // body::-webkit-scrollbar-track
+    //     background-color: red
+    //     background: transparent
+
+    // body::-webkit-scrollbar-thumb
+    //     background: $azulOscuro
+    //     border: $naranja 1px solid
+    //     transition: background 0.3s ease
+    //     border-radius: 2px
+
+    // body::-webkit-scrollbar-thumb:hover
+    //     background: $azulClaro
+
+
+
+// @media (min-width: 2300px)
+//   body::-webkit-scrollbar
+//     width: 28px
+
+// @media (max-width: 890px)
+//   body::-webkit-scrollbar
+//     width: 10px
+
+// @media (max-width: 575px)
+//   body::-webkit-scrollbar
+//     width: 8px
+
+// @media (max-width: 350px)
+//   body::-webkit-scrollbar
+//     width: 5px

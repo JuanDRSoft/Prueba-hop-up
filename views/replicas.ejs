@@ -1,0 +1,69 @@
+<%- include('header') %>
+<main class="replicas">
+    <section class="cajaDesplegable">
+        <div class="barra">
+            <button id="botonTiendas"><h3>Tiendas</h3></button>
+            <button id="botonFabricantes"><h3>Fabricantes</h3></button>
+            <button id="botonCategorias"><h3>Categorías</h3></button>
+            <button id="botonTipo"><h3>Tipo</h3></button>
+            <button id="botonMaterial"><h3>Material</h3></button>
+            <button id="botonEstado"><h3>Estado</h3></button>
+            <button id="botonPrecios"><h3>Precios</h3></button>
+            <button id="botonOrdenar"><h3>Ordenar</h3></button>
+        </div>
+        <div class="escondido">
+            <div id="contenidoTiendas" class="contenido-escondido">
+                <!-- CHECKBOX EN EL QUE SE PUEDE FILTRAR POR UNA O VARIAS TIENDAS -->
+            </div>
+            <div id="contenidoFabricantes" class="contenido-escondido">
+                <!-- CHECKBOX EN EL QUE SE PUEDE FILTRAR POR UNA O VARIAS MARCAS -->
+            </div>
+            <div id="contenidoCategorias" class="contenido-escondido">
+                <!-- CHECKBOX EN EL QUE SE PUEDE FILTRAR POR UNA O VARIAS CATEGORÍAS -->
+            </div>
+            <div id="contenidoTipo" class="contenido-escondido">
+                <h4>No Disponible Actualmente</h4>
+            </div>
+            <div id="contenidoMaterial" class="contenido-escondido">
+                <h4>No Disponible Actualmente</h4>
+            </div>
+            <div id="contenidoEstado" class="contenido-escondido">
+                <!-- CHECKBOX EN EL QUE SE PUEDE FILTRAR POR UNA O VARIOS ESTADOS -->
+            </div>
+            <div id="contenidoPrecios" class="contenido-escondido">
+                <!-- UNA BARRA CON UN PUNTO A LA IZQUIERDA Y OTRO A LA DERECHA EN EL QUE SE PUEDA AJUSTAR EL RANGO DE PRECIO POR EL QUE SE QUIERE FILTRAR -->
+            </div>
+            <div id="contenidoOrdenar" class="contenido-escondido">
+                <!-- CHECKBOX QUE SOLO SE PUEDE ELEGIR UNO Y ESTÉ POR DEFECTO MARCADO EL DE ORDENAR DE MENOR PRECIO A MENOR, PERO QUE HAYA LA OPCIÓN CONTRARIA TAMBIÉN -->
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <section class="principal">
+        <div class="columna izquierda">
+        </div>
+        <div class="productos" id="seccion_productos">
+            <div id="filtro-nombre">
+                <!-- CAJA PARA FILTRAR POR BÚSQUEDA POR NOMBRE -->
+            </div>
+            <p id="contador">Cargando...</p>
+            <ul id="replicas" class="caja-grid">
+                <!-- Aquí se añaden los productos -->
+            </ul>
+            <button id="bt-cargar-mas" style="display: none;">Mostrar Más</button>
+        </div>
+        <div class="columna derecha">
+        </div>
+    </section>
+
+
+
+
+    <script src="./js/replicas.js"></script>
+</main>
+<%- include('footer') %>
+
+

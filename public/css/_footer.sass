@@ -1,0 +1,131 @@
+footer
+    width: 100%
+    background: $azulOscuro
+    color: $naranja
+    text-align: center
+
+    .redes-sociales
+        h2
+            padding: calc( #{$margen} / 2 )
+            font-size: 30px
+            font-weight: 900
+
+        .caja
+            display: flex
+            justify-content: space-around
+            border-top: $naranja 1px solid
+            border-bottom: $naranja 1px solid
+
+            a
+                text-decoration: none
+                width: 100%
+                height: 75px
+                // background: $azulClaroTransparente1
+                display: flex
+                align-items: center
+                justify-content: center
+                transition: background 0.3s ease
+
+                i
+                    font-size: 50px
+                    color: $naranja
+                    transition: all 0.3s ease
+
+                &.instagram:hover
+                    background: $azulClaroTransparente1
+
+                    i
+                        color: #c13584
+                        transform: scale(1.2)
+
+                &.twitter:hover
+                    background: $azulClaroTransparente1
+
+                    i
+                        color: #1D9BF0
+                        transform: scale(1.2)
+
+                &.youtube:hover
+                    background: $azulClaroTransparente1
+
+                    i
+                        color: red
+                        transform: scale(1.2)
+
+                &.tiktok:hover
+                    background: $azulClaroTransparente1
+
+                    i
+                        color: #FE2C55
+                        transform: scale(1.2)
+
+    .legal
+        p
+            padding: calc( #{$margen} / 4 )
+            font-size: 20px
+            font-weight: 400
+
+
+
+
+@media (max-width: 1200px)
+    footer
+        .redes-sociales
+            h2
+                padding: calc( #{$margen1200} / 2 )
+                font-size: 2.5vw
+
+            .caja
+                a
+                    width: 100%
+                    height: 75px
+
+                    i
+                        font-size: 50px
+
+        .legal
+            p
+                padding: calc( #{$margen1200} / 4 )
+                font-size: 1.66vw
+
+@media (max-width: 770px)
+    footer
+        .redes-sociales
+            h2
+                padding: calc( #{$margen770} / 2 )
+                font-size: 3.5vw
+
+            .caja
+                a
+                    width: 100%
+                    height: 50px
+
+                    i
+                        font-size: 30px
+
+        .legal
+            p
+                padding: calc( #{$margen770} / 4 )
+                font-size: 2.5vw
+
+@media (max-width: 445px)
+    footer
+        .redes-sociales
+            h2
+                padding: calc( #{$margen770} / 2 )
+                font-size: 4vw
+
+            .caja
+                a
+                    width: 100%
+                    height: 50px
+
+                    i
+                        font-size: 30px
+
+        .legal
+            p
+                padding: calc( #{$margen770} / 4 )
+                font-size: 3vw
+
+

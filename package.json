@@ -28,6 +28,7 @@
     "openai": "^3.2.1",
     "puppeteer": "^20.3.0",
     "puppeteer-chromium-resolver": "^20.0.0",
+    "puppeteer-core": "^20.5.0",
     "sequelize": "^6.31.1"
   }
 }

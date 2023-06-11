@@ -420,7 +420,10 @@ async function borrarReplicas() {
 // }
 // TODAS LAS CATEGORÍAS MAD TACTICAL:
 async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({
+    headless: false,
+    ignoreDefaultArgs: ["--disable-extensions"],
+  });
 
   let newProductIds = [];
 

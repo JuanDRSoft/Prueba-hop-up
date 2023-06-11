@@ -429,6 +429,9 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
     headless: false,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
+    env: {
+      DISPLAY: ":10.0",
+    },
   });
 
   let newProductIds = [];
@@ -611,6 +614,9 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
     headless: false,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
+    env: {
+      DISPLAY: ":10.0",
+    },
   });
 
   let newProductIds = [];
@@ -833,6 +839,9 @@ async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
     headless: false,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
+    env: {
+      DISPLAY: ":10.0",
+    },
   });
 
   let newProductIds = [];

@@ -419,11 +419,12 @@ async function borrarReplicas() {
 //     await browser.close();
 // }
 // TODAS LAS CATEGORÍAS MAD TACTICAL:
-const PCR = require("puppeteer-chromium-resolver");
-const options = {};
-const stats = await PCR(options);
 
 async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
+  const PCR = require("puppeteer-chromium-resolver");
+  const options = {};
+  const stats = await PCR(options);
+
   const browser = await puppeteer.launch({
     headless: false,
     args: ["--no-sandbox"],

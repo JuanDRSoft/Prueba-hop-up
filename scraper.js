@@ -426,7 +426,7 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
   const stats = await PCR(options);
 
   const browser = await stats.puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
   });
@@ -608,7 +608,7 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
   const stats = await PCR(options);
 
   const browser = await stats.puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
   });
@@ -830,7 +830,7 @@ async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
   const stats = await PCR(options);
 
   const browser = await stats.puppeteer.launch({
-    headless: false,
+    headless: true,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
   });

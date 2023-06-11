@@ -422,8 +422,7 @@ async function borrarReplicas() {
 async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
   const browser = await puppeteer.launch({
     headless: false,
-    executablePath:
-      "./node_modules/puppeteer/.local-chromium/win64-656675/chrome-win/chrome.exe",
+    args: ["--no-sandbox"],
   });
 
   let newProductIds = [];

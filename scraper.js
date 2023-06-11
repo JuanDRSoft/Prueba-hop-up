@@ -1,5 +1,5 @@
 //scraper.js
-const puppeteer = require("puppeteer-core");
+const puppeteer = require("puppeteer");
 const cheerio = require("cheerio");
 const { ObjectId } = require("mongodb");
 const { getCollection } = require("./basedatos");
@@ -422,16 +422,13 @@ async function borrarReplicas() {
 const PCR = require("puppeteer-chromium-resolver");
 
 async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
-  //   const options = {};
-  //   const stats = await PCR(options);
+  const options = {};
+  const stats = await PCR(options);
 
-  const browserFetcher = puppeteer.createBrowserFetcher();
-  let revisionInfo = await browserFetcher.download("884014");
-
-  const browser = await puppeteer.launch({
+  const browser = await stats.puppeteer.launch({
     headless: false,
-    args: ["--no-sandbox", "--disabled-setupid-sandbox"],
-    executablePath: revisionInfo.executablePath,
+    args: ["--no-sandbox"],
+    executablePath: stats.executablePath,
   });
 
   let newProductIds = [];
@@ -607,16 +604,13 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
 // HOBBY EXPERT
 // FUSILES Y SUBFUSILES HOBBY EXPERT (Lo hago junto porque sino se borraria la lista de modificados en esa tanda, borrando los fusiles al final...)
 async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
-  //   const options = {};
-  //   const stats = await PCR(options);
+  const options = {};
+  const stats = await PCR(options);
 
-  const browserFetcher = puppeteer.createBrowserFetcher();
-  let revisionInfo = await browserFetcher.download("884014");
-
-  const browser = await puppeteer.launch({
+  const browser = await stats.puppeteer.launch({
     headless: false,
-    args: ["--no-sandbox", "--disabled-setupid-sandbox"],
-    executablePath: revisionInfo.executablePath,
+    args: ["--no-sandbox"],
+    executablePath: stats.executablePath,
   });
 
   let newProductIds = [];
@@ -832,16 +826,13 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
 }
 // TODAS LAS CATEGORÍAS HOBBY EXPERT:
 async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
-  //   const options = {};
-  //   const stats = await PCR(options);
+  const options = {};
+  const stats = await PCR(options);
 
-  const browserFetcher = puppeteer.createBrowserFetcher();
-  let revisionInfo = await browserFetcher.download("884014");
-
-  const browser = await puppeteer.launch({
+  const browser = await stats.puppeteer.launch({
     headless: false,
-    args: ["--no-sandbox", "--disabled-setupid-sandbox"],
-    executablePath: revisionInfo.executablePath,
+    args: ["--no-sandbox"],
+    executablePath: stats.executablePath,
   });
 
   let newProductIds = [];

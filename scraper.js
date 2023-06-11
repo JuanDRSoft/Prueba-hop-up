@@ -114,7 +114,7 @@ async function borrarReplicas() {
 
 // FUSILES Y SUBFUSILES MAD TACTICAL
 // async function scrapeMadTacticalFusilesSubfusiles(url, tiendaNombre) {
-//     const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser',headless: false});
+//     const browser = await puppeteer.launch({headless: false});
 
 //     let newProductIds = [];
 
@@ -216,7 +216,7 @@ async function borrarReplicas() {
 // }
 // ESCOPETAS MAD TACTICAL
 // async function scrapeMadTacticalEscopetas(url, tiendaNombre) {
-//     const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser',headless: false});
+//     const browser = await puppeteer.launch({headless: false});
 
 //     let newProductIds = [];
 
@@ -318,7 +318,7 @@ async function borrarReplicas() {
 // }
 // PISTOLAS MAD TACTICAL
 // async function scrapeMadTacticalPistolas(url, tiendaNombre) {
-//     const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser',headless: false});
+//     const browser = await puppeteer.launch({headless: false});
 
 //     let newProductIds = [];
 
@@ -420,10 +420,7 @@ async function borrarReplicas() {
 // }
 // TODAS LAS CATEGORÍAS MAD TACTICAL:
 async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
-  const browser = await puppeteer.launch({
-    executablePath: "/usr/bin/chromium-browser",
-    headless: false,
-  });
+  const browser = await puppeteer.launch({ headless: false });
 
   let newProductIds = [];
 
@@ -598,10 +595,7 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
 // HOBBY EXPERT
 // FUSILES Y SUBFUSILES HOBBY EXPERT (Lo hago junto porque sino se borraria la lista de modificados en esa tanda, borrando los fusiles al final...)
 async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
-  const browser = await puppeteer.launch({
-    executablePath: "/usr/bin/chromium-browser",
-    headless: false,
-  });
+  const browser = await puppeteer.launch({ headless: false });
 
   let newProductIds = [];
 
@@ -816,10 +810,7 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
 }
 // TODAS LAS CATEGORÍAS HOBBY EXPERT:
 async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
-  const browser = await puppeteer.launch({
-    executablePath: "/usr/bin/chromium-browser",
-    headless: false,
-  });
+  const browser = await puppeteer.launch({ headless: false });
 
   let newProductIds = [];
 

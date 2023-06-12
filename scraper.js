@@ -434,7 +434,7 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
   let newProductIds = [];
 
   const page = await browser.newPage();
-  await page.setDefaultTimeout(20000);
+  await page.setDefaultNavigationTimeout(20000);
   await page.goto(url, { timeout: 10000 });
 
   const tiendasCollection = await getCollection("tienda");
@@ -631,7 +631,7 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
   const page = await browser.newPage();
 
   for (let url of urls) {
-    await page.setDefaultTimeout(20000);
+    await page.setDefaultNavigationTimeout(20000);
     await page.goto(url);
     let tipos = await page.$$eval("div.lvl3-category-banner", (divs) =>
       divs.map((div) => ({
@@ -641,7 +641,7 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
     );
 
     for (let tipo of tipos) {
-      await page.setDefaultTimeout(20000);
+      await page.setDefaultNavigationTimeout(20000);
       await page.goto(tipo.url);
 
       let hasNextPage = true;
@@ -853,7 +853,7 @@ async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
   }
 
   const page = await browser.newPage();
-  await page.setDefaultTimeout(20000);
+  await page.setDefaultNavigationTimeout(20000);
   await page.goto(url);
 
   let tipos = await page.$$eval("div.lvl3-category-banner", (divs) =>
@@ -864,7 +864,7 @@ async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
   );
 
   for (let tipo of tipos) {
-    await page.setDefaultTimeout(20000);
+    await page.setDefaultNavigationTimeout(20000);
     await page.goto(tipo.url);
 
     let hasNextPage = true;

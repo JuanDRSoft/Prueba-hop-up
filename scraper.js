@@ -641,7 +641,7 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
     );
 
     for (let tipo of tipos) {
-      await page.setDefaultNavigationTimeout(20000);
+      await page.setDefaultNavigationTimeout(30000);
       await page.goto(tipo.url);
 
       let hasNextPage = true;

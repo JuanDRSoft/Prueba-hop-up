@@ -429,12 +429,12 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
     headless: true,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
-    timeout: 5000,
   });
 
   let newProductIds = [];
 
   const page = await browser.newPage();
+  await page.setDefaultTimeout(20000);
   await page.goto(url, { timeout: 10000 });
 
   const tiendasCollection = await getCollection("tienda");
@@ -612,7 +612,6 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
     headless: true,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
-    timeout: 5000,
   });
 
   let newProductIds = [];
@@ -630,6 +629,7 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
   }
 
   const page = await browser.newPage();
+  await page.setDefaultTimeout(20000);
 
   for (let url of urls) {
     await page.goto(url);
@@ -835,7 +835,6 @@ async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
     headless: true,
     args: ["--no-sandbox"],
     executablePath: stats.executablePath,
-    timeout: 5000,
   });
 
   let newProductIds = [];
@@ -853,6 +852,7 @@ async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
   }
 
   const page = await browser.newPage();
+  await page.setDefaultTimeout(20000);
   await page.goto(url);
 
   let tipos = await page.$$eval("div.lvl3-category-banner", (divs) =>

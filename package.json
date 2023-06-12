@@ -27,7 +27,6 @@
     "nodemon": "^2.0.22",
     "openai": "^3.2.1",
     "puppeteer": "3.0.4",
-    "puppeteer-chromium-resolver": "^20.0.0",
     "puppeteer-core": "^20.5.0",
     "sequelize": "^6.31.1"
   }

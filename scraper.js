@@ -419,16 +419,15 @@ async function borrarReplicas() {
 //     await browser.close();
 // }
 // TODAS LAS CATEGORÍAS MAD TACTICAL:
-const PCR = require("puppeteer-chromium-resolver");
+// const PCR = require("puppeteer-chromium-resolver");
 
 async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
   const options = {};
-  const stats = await PCR(options);
+  //;
 
-  const browser = await stats.puppeteer.launch({
+  const browser = await puppeteer.launch({
     headless: true,
     args: ["--no-sandbox"],
-    executablePath: stats.executablePath,
   });
 
   let newProductIds = [];
@@ -606,12 +605,9 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
 // FUSILES Y SUBFUSILES HOBBY EXPERT (Lo hago junto porque sino se borraria la lista de modificados en esa tanda, borrando los fusiles al final...)
 async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
   const options = {};
-  const stats = await PCR(options);
-
-  const browser = await stats.puppeteer.launch({
+  const browser = await puppeteer.launch({
     headless: true,
     args: ["--no-sandbox"],
-    executablePath: stats.executablePath,
   });
 
   let newProductIds = [];
@@ -830,12 +826,9 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
 // TODAS LAS CATEGORÍAS HOBBY EXPERT:
 async function scrapeHobbyExpert(url, tiendaNombre, categoria, estado) {
   const options = {};
-  const stats = await PCR(options);
-
-  const browser = await stats.puppeteer.launch({
+  const browser = await puppeteer.launch({
     headless: true,
     args: ["--no-sandbox"],
-    executablePath: stats.executablePath,
   });
 
   let newProductIds = [];

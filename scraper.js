@@ -631,7 +631,7 @@ async function scrapeHobbyExpertFusilesSubfusiles(urls, tiendaNombre, estado) {
   const page = await browser.newPage();
 
   for (let url of urls) {
-    await page.setDefaultNavigationTimeout(20000);
+    await page.setDefaultNavigationTimeout(30000);
     await page.goto(url);
     let tipos = await page.$$eval("div.lvl3-category-banner", (divs) =>
       divs.map((div) => ({

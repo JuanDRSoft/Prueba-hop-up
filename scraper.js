@@ -435,7 +435,7 @@ async function scrapeMadTactical(url, tiendaNombre, categoria, estado) {
 
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(20000);
-  await page.goto(url, { timeout: 10000 });
+  await page.goto(url, { timeout: 20000 });
 
   const tiendasCollection = await getCollection("tienda");
   const tienda = await tiendasCollection.findOne({ nombre: tiendaNombre });

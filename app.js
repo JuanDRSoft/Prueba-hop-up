@@ -118,7 +118,7 @@ const port = 80;
 
 app.listen(port, async () => {
   console.log(
-    `<<<<<<<<<<<<<<<<<<<<App listening at http://3.142.246.62:3000/:${port}`
+    `<<<<<<<<<<<<<<<<<<<<App listening at http://3.142.246.62:${port}`
   );
   await connectDb();
 

@@ -117,7 +117,9 @@ app.get("/api/marcas", async (req, res) => {
 const port = 80;
 
 app.listen(port, async () => {
-  console.log(`<<<<<<<<<<<<<<<<<<<<App listening at http://localhost:${port}`);
+  console.log(
+    `<<<<<<<<<<<<<<<<<<<<App listening at http://3.142.246.62:3000/:${port}`
+  );
   await connectDb();
 
   // Borrar BBDD

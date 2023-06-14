@@ -115,7 +115,7 @@ app.get("/api/marcas", async (req, res) => {
 });
 
 // const port = "18.213.219.241" || 3000;
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.listen(port, async () => {
   console.log(`<<<<<<<<<<<<<<<<<<<<App listening at http://localhost:${port}`);

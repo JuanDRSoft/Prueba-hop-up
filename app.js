@@ -114,7 +114,7 @@ app.get("/api/marcas", async (req, res) => {
   res.json(marcas);
 });
 
-const port = 80;
+const port = 3000;
 
 app.listen(port, async () => {
   console.log(

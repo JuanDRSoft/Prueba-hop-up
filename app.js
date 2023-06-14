@@ -114,8 +114,7 @@ app.get("/api/marcas", async (req, res) => {
   res.json(marcas);
 });
 
-// const port = "18.213.219.241" || 3000;
-const port = 3000;
+const port = 80;
 
 app.listen(port, async () => {
   console.log(`<<<<<<<<<<<<<<<<<<<<App listening at http://localhost:${port}`);

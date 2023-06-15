@@ -250,7 +250,7 @@ app.listen(port, async () => {
 
 // ESCANEO PERIÓDICO
 const taskEscaneoPeriodico = cron.schedule(
-  "0 * * * *",
+  "* 2 * * *",
   async () => {
     // Categoría "Fusil / Subfusil"
     console.log(
